@@ -49,12 +49,12 @@ function sum() {
       throw new Error(`Unsupported data`)
     }
     if (typeof element === 'string') {
-      sumBonus += element.length
+      sumBonus += element.length;
     } else {
-      sumBonus += element
+      sumBonus += element;
     }
   }
-  return sumBonus
+  return sumBonus;
 }
 
 
@@ -64,7 +64,20 @@ function sum() {
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() { }
+function averageNumbers(numberArray) {
+  if (numberArray.length === 0) {
+    return null;
+  }
+
+  for (let i = 0; i < numberArray.length; i++) {
+    const arrayNumber = numberArray[i];
+    let result = 0;
+    result += arrayNumber;
+
+  }
+  let average = result / numberArray.length;
+  return average
+}
 
 
 // Level 2: Array of strings
