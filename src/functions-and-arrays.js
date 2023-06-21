@@ -17,7 +17,8 @@ function findLongestWord(words) {
       word = words[i];
     }
     else if (words.length === 0) {
-    return null; }
+      return null;
+    }
   return word;
 }
 
@@ -40,7 +41,22 @@ function sumNumbers() {
 
 
 // Iteration #3.1 Bonus:
-function sum() { }
+function sum() {
+  let sumBonus = 0
+
+  for (element of sumNumbers) {
+    if (typeof element === 'object') {
+      throw new Error(`Unsupported data`)
+    }
+    if (typeof element === 'string') {
+      sumBonus += element.length
+    } else {
+      sumBonus += element
+    }
+  }
+  return sumBonus
+}
+
 
 
 
